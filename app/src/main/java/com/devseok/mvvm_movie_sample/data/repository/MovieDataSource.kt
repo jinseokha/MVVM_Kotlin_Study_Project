@@ -25,6 +25,7 @@ class MovieDataSource(private val apiService: TheMovieDBInterface, private val c
                 .subscribeOn(Schedulers.io())
                 .subscribe({
                     callback.onResult(it.movieList, null, page+1)
+                    networkState.postValue(NetworkState.LOADED)
                 }, {
                     networkState.postValue(NetworkState.ERROR)
                 })
