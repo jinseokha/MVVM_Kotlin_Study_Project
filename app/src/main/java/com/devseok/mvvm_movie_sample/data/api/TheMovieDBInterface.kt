@@ -11,9 +11,11 @@ interface TheMovieDBInterface {
 
 
     @GET("movie/{movie_id}")
-    fun getMovieDetails(@Path("movie_id") id: Int): Single<MovieDetails>
+    fun getMovieDetails(@Path("movie_id") id: Int,
+                        @Query("language") lang: String): Single<MovieDetails>
 
     @GET("movie/popular")
-    fun getPopularMovie(@Query("page") page: Int) : Single<MovieResponse>
+    fun getPopularMovie(@Query("page") page: Int,
+    @Query("language") lang: String) : Single<MovieResponse>
 
 }

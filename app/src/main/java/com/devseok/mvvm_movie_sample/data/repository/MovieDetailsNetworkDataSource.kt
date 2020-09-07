@@ -26,7 +26,7 @@ class MovieDetailsNetworkDataSource(private val apiServie: TheMovieDBInterface, 
 
         try {
             compositeDisposable.add(
-                apiServie.getMovieDetails(movieId)
+                apiServie.getMovieDetails(movieId, "ko")
                     .subscribeOn(Schedulers.io())
                     .subscribe( {
                         _downloadMovieDetailsResponse.postValue(it)

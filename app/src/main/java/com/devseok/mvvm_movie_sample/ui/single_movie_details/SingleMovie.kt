@@ -62,7 +62,7 @@ class SingleMovie : AppCompatActivity() {
         movie_runtime.text = it.runtime.toString() + " minutes"
         movie_overview.text = it.overview
 
-        val formatCurrency = NumberFormat.getCurrencyInstance(Locale.US)
+        val formatCurrency = NumberFormat.getCurrencyInstance(Locale.KOREA)
         movie_budget.text = formatCurrency.format(it.budget)
         movie_revenue.text = formatCurrency.format(it.revenue)
 
@@ -70,10 +70,6 @@ class SingleMovie : AppCompatActivity() {
         Glide.with(this)
             .load(moviePosterURL)
             .into(iv_movie_poster)
-
-
-
-
     }
 
     private fun getViewModel(movieId: Int): SingleMovieViewModel {

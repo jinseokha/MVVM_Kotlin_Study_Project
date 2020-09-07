@@ -21,7 +21,7 @@ class MovieDataSource(private val apiService: TheMovieDBInterface, private val c
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiService.getPopularMovie(page)
+            apiService.getPopularMovie(page, "ko")
                 .subscribeOn(Schedulers.io())
                 .subscribe({
                     callback.onResult(it.movieList, null, page+1)
@@ -42,7 +42,7 @@ class MovieDataSource(private val apiService: TheMovieDBInterface, private val c
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiService.getPopularMovie(params.key)
+            apiService.getPopularMovie(params.key, "ko")
                 .subscribeOn(Schedulers.io())
                 .subscribe({
                     if(it.totalPages >= params.key) {
