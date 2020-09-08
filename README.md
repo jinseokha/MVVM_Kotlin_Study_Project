@@ -11,6 +11,6 @@ description
   
 -----------
 <div>
-  <img width="50%" src="https://user-images.githubusercontent.com/46430166/92470029-ca8f2a00-f210-11ea-93a6-868210ec52ed.jpg">
-  <img width="50%" src="https://user-images.githubusercontent.com/46430166/92470165-01654000-f211-11ea-90b1-0b7a4885ebb3.jpg">
+  <img width="200" src="https://user-images.githubusercontent.com/46430166/92470029-ca8f2a00-f210-11ea-93a6-868210ec52ed.jpg">
+  <img width="200" src="https://user-images.githubusercontent.com/46430166/92470165-01654000-f211-11ea-90b1-0b7a4885ebb3.jpg">
 </div>
