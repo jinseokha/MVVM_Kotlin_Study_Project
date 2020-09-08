@@ -1,7 +1,7 @@
 # Movie Project (인기영화 조회 프로젝트) 
 
 
-**description 
+Description 
  - Kotlin_MVVM 패턴 적용 샘플 프로젝트
  
  <br/><br/>
