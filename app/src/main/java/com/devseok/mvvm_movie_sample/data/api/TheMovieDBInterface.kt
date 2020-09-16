@@ -18,4 +18,9 @@ interface TheMovieDBInterface {
     fun getPopularMovie(@Query("page") page: Int,
     @Query("language") lang: String) : Single<MovieResponse>
 
+    @GET("/search/movie")
+    fun getSearchMovie(@Query("language") lang:String,
+    @Query("query") query: String,
+    @Query("page") page: Int) : Single<MovieResponse>
+
 }
