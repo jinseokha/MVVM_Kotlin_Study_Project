@@ -1,2 +1,4 @@
+include ':mvp_movie_kotiln'
+include ':mvp_movie'
 include ':app'
 rootProject.name = "Mvvm_movie_sample"
