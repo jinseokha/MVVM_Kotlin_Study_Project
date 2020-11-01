@@ -1,4 +1,4 @@
 package com.devseok.mvp_movie_kotiln.data
 
-class MovieData {
+class ImageData {
 }
