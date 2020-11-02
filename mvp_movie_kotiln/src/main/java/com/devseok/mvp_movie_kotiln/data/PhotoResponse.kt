@@ -3,61 +3,31 @@ package com.devseok.mvp_movie_kotiln.data
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieResponse(
-    val page: Int,
-    val results: List<MovieResult>,
-    val totalPages: Int,
-    val totalResults: Int
+data class PhotoResponse(
+    val photos: Photos,
+    val stat: String, //ok
+    val code: Int,
+    val message: String?
 )
 
-data class MovieResult(
-    val adult: Boolean,
-    val backdropPath: String,
-    val genreIds: List<Int>,
-    val id: Int,
-    val originalLanguage: String,
-    val originalTitle: String,
-    val overview: String,
-    val popularity: Double,
-    val posterPath: String,
-    val releaseDate: String,
-    val title: String,
-    val video: Boolean,
-    val voteAverage: Double,
-    val voteCount: Int
+data class Photos(
+    val page: Int, //1
+    val pages: String, //2347
+    val perpage: Int, //100
+    val total: String, //234661
+    val photo: List<Photo>
 )
 
-/*
-data class MovieResponse(
-    val page: Int,
-    val results: List<Result>,
-    @SerializedName("total_pages")
-    val totalPages: Int,
-    @SerializedName("total_results")
-    val totalResults: Int
-)
-
-data class Result(
-    val adult: Boolean,
-    @SerializedName("backdrop_path")
-    val backdropPath: String,
-    @SerializedName("genre_ids")
-    val genreIds: List<Int>,
-    val id: Int,
-    @SerializedName("original_language")
-    val originalLanguage: String,
-    @SerializedName("original_title")
-    val originalTitle: String,
-    val overview: String,
-    val popularity: Double,
-    @SerializedName("poster_path")
-    val posterPath: String,
-    @SerializedName("release_date")
-    val releaseDate: String,
-    val title: String,
-    val video: Boolean,
-    @SerializedName("vote_average")
-    val voteAverage: Double,
-    @SerializedName("vote_count")
-    val voteCount: Int
-)*/
+data class Photo(
+    val id: String, //38294557366
+    val owner: String, //139066376@N03
+    private val secret: String, //a477b5bd73
+    private val server: String, //4568
+    private val farm: Int, //5
+    val title: String, //Men's Clothes
+    val ispublic: Int, //1
+    val isfriend: Int, //0
+    val isfamily: Int //0
+) {
+    fun getImageUrl() = "https://farm$farm.staticflickr.com/$server/${id}_$secret.jpg"
+}

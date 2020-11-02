@@ -51,5 +51,5 @@ task clean(type: Delete) {
 ext {
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
-    themoviedbAPIKey = properties.getProperty('themoviedbAPIKey', "\"\"")
+    flickrApiKey = properties.getProperty('flickrApiKey', "\"\"")
 }

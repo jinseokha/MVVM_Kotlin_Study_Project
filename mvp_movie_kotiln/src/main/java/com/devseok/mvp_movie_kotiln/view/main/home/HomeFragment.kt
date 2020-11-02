@@ -36,7 +36,7 @@ class HomeFragment : Fragment(), HomeContract.View {
             super.onScrolled(recyclerView, dx, dy)
 
             val visibleItemCount = recyclerView.childCount
-            //val totalItemCount = im
+            //val totalItemCount = i
             val firstVisibleItem = (recyclerView.layoutManager as? GridLayoutManager)?.findFirstVisibleItemPosition() ?: 0
 
 

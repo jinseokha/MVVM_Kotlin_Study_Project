@@ -19,12 +19,12 @@ android {
     buildTypes {
 
         debug {
-            buildConfigField "String", "THEMOVIE_API_KEY", rootProject.ext.themoviedbAPIKey
+            buildConfigField "String", "FLICKR_API_KEY", rootProject.ext.flickrApiKey
         }
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "THEMOVIE_API_KEY", rootProject.ext.themoviedbAPIKey
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "FLICKR_API_KEY", rootProject.ext.flickrApiKey
         }
     }
 
@@ -61,6 +61,7 @@ dependencies {
     // OK HTTP
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation project(path: ':app')
 
     testImplementation 'junit:junit:4.13'
     testImplementation "org.mockito:mockito-core:$mockitoCore"

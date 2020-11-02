@@ -1,12 +1,12 @@
 package com.devseok.mvp_movie_kotiln.view.main.home.adapter.model
 
-import com.devseok.mvp_movie_kotiln.data.MovieResult
+import com.devseok.mvp_movie_kotiln.data.Photo
 
 interface ImageRecyclerModel {
 
-    fun addItem(movieData: MovieResult?)
+    fun addItem(movieData: Photo?)
 
-    fun  getItem(position: Int): MovieResult?
+    fun  getItem(position: Int): Photo?
 
     fun getItemCount() : Int
 
